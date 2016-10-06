@@ -320,7 +320,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      this.on(['resize', 'scroll', 'touchstart', 'touchmove', 'touchend', 'pageshow', 'load'], this.recomputeState);
+	      this.on(['resize', 'wheel', 'touchstart', 'touchmove', 'touchend', 'pageshow', 'load'], this.recomputeState);
 	      this.recomputeState();
 	    }
 	  }, {
