@@ -116,14 +116,16 @@ export default class Sticky extends React.Component {
   }
 
   on(events, callback) {
+    const scrollable = document.getElementById('scrollable');
     events.forEach((evt) => {
-      window.addEventListener(evt, callback);
+      scrollable.addEventListener(evt, callback);
     });
   }
 
   off(events, callback) {
+    const scrollable = document.getElementById('scrollable');
     events.forEach((evt) => {
-      window.removeEventListener(evt, callback);
+      scrollable.removeEventListener(evt, callback);
     });
   }
 
