@@ -286,7 +286,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    };
 
-	    _this.recomputeState = function () {
+	    _this.recomputeState = function (e) {
+	      console.log(e);
 	      var isSticky = _this.isSticky();
 	      var height = _this.getHeight();
 	      var width = _this.getWidth();
@@ -320,7 +321,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      this.on(['resize', 'scroll', 'touchstart', 'touchmove', 'touchend', 'pageshow', 'load'], this.recomputeState);
+	      this.on(['resize', 'wheel', 'touchstart', 'touchmove', 'touchend', 'pageshow', 'load'], this.recomputeState);
 	      this.recomputeState();
 	    }
 	  }, {
